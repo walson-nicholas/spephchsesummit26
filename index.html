@@ -178,16 +178,13 @@
   .step h3{font-size:19px;color:var(--blue-900);margin-bottom:8px}
   .step p{color:var(--muted);font-size:15px}
 
-  /* Collaboration */
+  /* Organiser */
   .collab{position:relative;overflow:hidden;border-radius:28px;padding:56px clamp(24px,5vw,64px);background:linear-gradient(135deg,var(--blue-900) 0%,var(--blue-700) 60%,#0F4FB8 100%);color:#fff}
   .collab::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:40px 40px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 70%);mask-image:linear-gradient(90deg,transparent,#000 70%)}
   .collab > *{position:relative}
   .collab .kicker{color:var(--gold)}
   .collab h2{font-size:clamp(26px,3.6vw,38px);margin:10px 0 14px;max-width:720px}
-  .collab > p{max-width:720px;color:#D6E3FA;font-size:17px}
-  .partners{display:flex;align-items:center;gap:18px;margin:28px 0 34px;flex-wrap:wrap}
-  .partner{padding:12px 20px;border-radius:14px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);font:700 16px "Sora",sans-serif}
-  .x{font:800 22px "Sora",sans-serif;color:var(--gold)}
+  .collab > p{max-width:720px;color:#D6E3FA;font-size:17px;margin-bottom:34px}
   .pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
   @media (max-width:900px){.pillars{grid-template-columns:1fr 1fr}}
   @media (max-width:480px){.pillars{grid-template-columns:1fr}}
@@ -246,7 +243,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#registration">Registration</a></li>
         <li><a href="#how">How it works</a></li>
-        <li><a href="#collaboration">Collaboration</a></li>
+        <li><a href="#organiser">Organiser</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -264,7 +261,8 @@
         <h1 id="hero-title"><span class="hse">HSE</span> Summit<span class="yr">2026</span></h1>
         <p class="theme-label">Theme</p>
         <p class="theme">Scaling Production, Sustaining Safety:<span>Embedding HSE Excellence in Nigeria’s Energy Growth</span></p>
-        <p class="organisers">Organised by <strong>SPE Port Harcourt Section 103</strong>
+        <p class="organisers">Organised by <strong>SPE Port Harcourt Section 103</strong></p>
+
         <div class="meta">
           <span class="chip">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
@@ -280,7 +278,6 @@
           <a class="btn btn-primary" href="#registration">Register Now
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
-          <a class="btn btn-ghost" href="#registration">View Registration Options</a>
         </div>
 
         <div class="countdown" id="countdown" aria-label="Time remaining until the summit" role="timer">
@@ -351,7 +348,7 @@
           <g class="float">
             <circle cx="96" cy="150" r="34" fill="#fff" stroke="#D9E2F1"/>
             <path d="M96 168 l-14 -14 a8 8 0 0 1 14 -10 a8 8 0 0 1 14 10z" fill="#E5484D"/>
-                      </g>
+          </g>
           <g class="float" style="animation-delay:-2s">
             <circle cx="250" cy="44" r="34" fill="#fff" stroke="#D9E2F1"/>
             <path d="M232 54 h36 M236 54 a14 14 0 0 1 28 0 M250 40 v-4" fill="#E2A51B" stroke="#E2A51B" stroke-width="4" stroke-linecap="round"/>
@@ -360,8 +357,7 @@
           <g class="float" style="animation-delay:-4s">
             <circle cx="404" cy="150" r="34" fill="#fff" stroke="#D9E2F1"/>
             <path d="M390 162 c0 -18 14 -28 30 -28 c0 18 -10 30 -28 30 M392 162 l16 -16" fill="#2F9E44" stroke="#2F9E44" stroke-width="2" stroke-linecap="round"/>
-                      </g>
-          
+          </g>
           <!-- date seal -->
           <g transform="translate(372 384)">
             <circle r="52" fill="#0B3B8C"/>
@@ -415,22 +411,6 @@
         <p>Select the category that applies to you and pay securely online. SPE members enjoy reduced rates across all categories.</p>
       </div>
 
-      <!--
-        ==========================================================
-        PAYMENT LINKS
-        Replace the placeholder Paystack URLs with the final payment links before publishing.
-        Edit only the href="..." value on each "Register" button below.
-        Each button is labelled with a matching comment for easy search:
-          PAYSTACK_LINK_SUMMIT_REGULAR       Summit Only, Regular Non-SPE Member   ₦50,000
-          PAYSTACK_LINK_SUMMIT_SPE           Summit Only, SPE Member               ₦30,000
-          PAYSTACK_LINK_EARLY_REGULAR        Early Bird Regular                    ₦30,000
-          PAYSTACK_LINK_EARLY_SPE            Early Bird SPE Member                 ₦10,000
-          PAYSTACK_LINK_HYBRID_NON_MEMBER    Summit + Hybrid Training, Non-member  ₦70,000
-          PAYSTACK_LINK_HYBRID_SPE           Summit + Hybrid Training, SPE Member  ₦40,000
-          PAYSTACK_LINK_PRACTICAL_NON_MEMBER Summit + Practical Training, Non-member ₦100,000
-          PAYSTACK_LINK_PRACTICAL_SPE        Summit + Practical Training, SPE Member ₦70,000
-        ==========================================================
-      -->
       <div class="tiers">
 
         <!-- ---------- Tier 1: Summit Only ---------- -->
@@ -454,8 +434,7 @@
                 <span class="price">₦10,000</span>
               </div>
               <div class="tags"><span class="tag tag-eb">Early Bird</span><span class="tag tag-best">Best value</span><span class="tag tag-save">Save ₦20,000</span></div>
-              <!-- PAYSTACK_LINK_EARLY_SPE -->
-              <a class="btn btn-gold pay" href="PAYSTACK_LINK_EARLY_SPE" target="_blank" rel="noopener">Register — Early Bird SPE Member</a>
+              <a class="btn btn-gold pay" href="https://paystack.shop/pay/member-hsesummit" target="_blank" rel="noopener">Register — Early Bird SPE Member</a>
             </div>
             <div class="opt early">
               <div class="opt-row">
@@ -463,8 +442,7 @@
                 <span class="price">₦30,000</span>
               </div>
               <div class="tags"><span class="tag tag-eb">Early Bird</span><span class="tag tag-save">Save ₦20,000</span></div>
-              <!-- PAYSTACK_LINK_EARLY_REGULAR -->
-              <a class="btn btn-gold pay" href="PAYSTACK_LINK_EARLY_REGULAR" target="_blank" rel="noopener">Register — Early Bird Regular</a>
+              <a class="btn btn-gold pay" href="https://paystack.shop/pay/Non-Member-HSESummit" target="_blank" rel="noopener">Register — Early Bird Regular</a>
             </div>
           </div>
 
@@ -475,16 +453,14 @@
                 <span class="opt-name">SPE Member</span>
                 <span class="price">₦30,000</span>
               </div>
-              <!-- PAYSTACK_LINK_SUMMIT_SPE -->
-              <a class="btn btn-primary pay" href="PAYSTACK_LINK_SUMMIT_SPE" target="_blank" rel="noopener">Register — Summit Only, SPE Member</a>
+              <a class="btn btn-primary pay" href="#" data-pending="true" target="_blank" rel="noopener">Register — Summit Only, SPE Member</a>
             </div>
             <div class="opt">
               <div class="opt-row">
                 <span class="opt-name">Regular Non-SPE Member</span>
                 <span class="price">₦50,000</span>
               </div>
-              <!-- PAYSTACK_LINK_SUMMIT_REGULAR -->
-              <a class="btn btn-ghost pay" href="PAYSTACK_LINK_SUMMIT_REGULAR" target="_blank" rel="noopener">Register — Summit Only, Regular Non-SPE Member</a>
+              <a class="btn btn-ghost pay" href="#" data-pending="true" target="_blank" rel="noopener">Register — Summit Only, Regular Non-SPE Member</a>
             </div>
           </div>
         </article>
@@ -507,16 +483,14 @@
                 <span class="price">₦40,000</span>
               </div>
               <div class="tags"><span class="tag tag-best">Best value</span><span class="tag tag-save">Save ₦30,000</span></div>
-              <!-- PAYSTACK_LINK_HYBRID_SPE -->
-              <a class="btn btn-primary pay" href="PAYSTACK_LINK_HYBRID_SPE" target="_blank" rel="noopener">Register — Summit + Hybrid Training, SPE Member</a>
+              <a class="btn btn-primary pay" href="https://paystack.shop/pay/hsesummit-hybridtraining-m" target="_blank" rel="noopener">Register — Summit + Hybrid Training, SPE Member</a>
             </div>
             <div class="opt">
               <div class="opt-row">
                 <span class="opt-name">Non-member</span>
                 <span class="price">₦70,000</span>
               </div>
-              <!-- PAYSTACK_LINK_HYBRID_NON_MEMBER -->
-              <a class="btn btn-ghost pay" href="PAYSTACK_LINK_HYBRID_NON_MEMBER" target="_blank" rel="noopener">Register — Summit + Hybrid Training, Non-member</a>
+              <a class="btn btn-ghost pay" href="https://paystack.shop/pay/hsesummit-hybridtraining" target="_blank" rel="noopener">Register — Summit + Hybrid Training, Non-member</a>
             </div>
           </div>
         </article>
@@ -538,16 +512,14 @@
                 <span class="price">₦70,000</span>
               </div>
               <div class="tags"><span class="tag tag-best">Best value</span><span class="tag tag-save">Save ₦30,000</span></div>
-              <!-- PAYSTACK_LINK_PRACTICAL_SPE -->
-              <a class="btn btn-primary pay" href="PAYSTACK_LINK_PRACTICAL_SPE" target="_blank" rel="noopener">Register — Summit + Practical Training, SPE Member</a>
+              <a class="btn btn-primary pay" href="https://paystack.shop/pay/hsesummit-practicaltraining-m" target="_blank" rel="noopener">Register — Summit + Practical Training, SPE Member</a>
             </div>
             <div class="opt">
               <div class="opt-row">
                 <span class="opt-name">Non-member</span>
                 <span class="price">₦100,000</span>
               </div>
-              <!-- PAYSTACK_LINK_PRACTICAL_NON_MEMBER -->
-              <a class="btn btn-ghost pay" href="PAYSTACK_LINK_PRACTICAL_NON_MEMBER" target="_blank" rel="noopener">Register — Summit + Practical Training, Non-member</a>
+              <a class="btn btn-ghost pay" href="https://paystack.shop/pay/hsesummit-practicaltraining-N" target="_blank" rel="noopener">Register — Summit + Practical Training, Non-member</a>
             </div>
           </div>
         </article>
@@ -587,18 +559,13 @@
     </div>
   </section>
 
-  <!-- ================= COLLABORATION ================= -->
-  <section class="section" id="collaboration" aria-labelledby="collab-title" style="padding-top:20px">
+  <!-- ================= ORGANISER ================= -->
+  <section class="section" id="organiser" aria-labelledby="organiser-title" style="padding-top:20px">
     <div class="wrap">
       <div class="collab reveal">
-        <p class="kicker">Collaboration</p>
-        <h2 id="collab-title">SPE Port Harcourt Section 103 × ISPON</h2>
-        <p>The summit is organised by SPE Port Harcourt Section 103 in collaboration with the Institute of Safety Professionals of Nigeria (ISPON), bringing together engineering and safety professionals to strengthen HSE competence across Nigeria’s energy sector.</p>
-        <div class="partners" aria-hidden="true">
-          <span class="partner">SPE Port Harcourt Section 103</span>
-          <span class="x">×</span>
-          <span class="partner">ISPON</span>
-        </div>
+        <p class="kicker">Organiser</p>
+        <h2 id="organiser-title">SPE Port Harcourt Section 103</h2>
+        <p>The summit is organised by the Society of Petroleum Engineers, Port Harcourt Section 103, bringing together engineering and safety professionals to strengthen HSE competence across Nigeria’s energy sector.</p>
         <div class="pillars">
           <div class="pillar">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg>
@@ -666,7 +633,7 @@
       </ul>
     </div>
     <div class="foot-bottom">
-      <span>© 2026 SPE Port Harcourt Section 103 · In collaboration with ISPON</span>
+      <span>© 2026 SPE Port Harcourt Section 103</span>
       <span class="legal">
         <!-- Replace # with the Privacy Policy and Terms & Conditions URLs -->
         <a href="#" data-placeholder="true">Privacy Policy</a>
@@ -702,10 +669,10 @@
     clearTimeout(toastTimer); toastTimer = setTimeout(function(){toast.classList.remove("show");},3500);
   }
 
-  // Guard placeholder links so visitors are not sent to a broken page
-  document.querySelectorAll("a.pay").forEach(function(a){
+  // Categories without a live payment link yet
+  document.querySelectorAll("a.pay[data-pending]").forEach(function(a){
     a.addEventListener("click",function(e){
-      if(a.getAttribute("href").indexOf("PAYSTACK_LINK_")===0){
+      if(a.dataset.pending){
         e.preventDefault();
         showToast("Online payment for this category will be available shortly.");
       }
