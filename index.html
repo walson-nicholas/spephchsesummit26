@@ -52,8 +52,8 @@
   .nav ul{display:flex;gap:26px;list-style:none}
   .nav ul a{text-decoration:none;color:var(--muted);font-weight:500;font-size:15px;white-space:nowrap}
   .nav ul a:hover{color:var(--blue-700)}
-  /* Section name only shows where it fits beside the logo: not alongside the nav below 1001px, nor on phones */
-  @media (max-width:1000px){.brand-text{display:none}}
+  /* Section name only shows where it fits beside the logo: not alongside the nav below 1101px, nor on phones */
+  @media (max-width:1100px){.brand-text{display:none}}
   @media (max-width:860px){.nav nav{display:none}.brand-text{display:block}}
   @media (max-width:520px){.brand-text{display:none}.brand-logo{height:36px}}
 
@@ -136,7 +136,30 @@
   .focus ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 18px}
   @media (max-width:520px){.focus ul{grid-template-columns:1fr}}
   .focus li{display:flex;gap:10px;align-items:flex-start;font-size:15px;font-weight:500}
-  .focus li::before{content:"";flex:0 0 18px;height:18px;margin-top:3px;border-radius:50%;background:var(--green-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232F9E44' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/11px no-repeat}
+  .focus li::before,.course li::before{content:"";flex:0 0 18px;height:18px;margin-top:3px;border-radius:50%;background:var(--green-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232F9E44' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/11px no-repeat}
+
+  /* Trainings */
+  .train-group{scroll-margin-top:80px}
+  .train-group + .train-group{margin-top:48px}
+  .train-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 24px;margin-bottom:18px}
+  .train-head h3{font-size:22px;color:var(--blue-900)}
+  .train-head p{color:var(--muted);font-size:15px}
+  .trainings{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .trainings.two{grid-template-columns:repeat(2,1fr)}
+  @media (max-width:1000px){.trainings{grid-template-columns:1fr 1fr}}
+  @media (max-width:600px){.trainings,.trainings.two{grid-template-columns:1fr}}
+  .course{display:flex;flex-direction:column;gap:12px;background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+  .course-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+  .course-num{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .mode{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:999px;white-space:nowrap}
+  .mode-hybrid{background:var(--gold-soft);color:#7A5200}
+  .mode-online{background:var(--blue-100);color:var(--blue-700)}
+  .mode-person{background:var(--green-soft);color:#1E7A31}
+  .course h4{font:700 17px/1.3 "Sora",sans-serif;color:var(--blue-900)}
+  .course ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+  .course li{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--muted)}
+  .course.practical{flex-direction:row;align-items:center;gap:18px}
+  .course.practical > div{flex:1;display:flex;flex-direction:column;gap:8px}
 
   /* Pricing */
   .pricing{background:linear-gradient(180deg,var(--white),var(--bg))}
@@ -245,6 +268,7 @@
     <nav aria-label="Primary">
       <ul>
         <li><a href="#about">About</a></li>
+        <li><a href="#trainings">Trainings</a></li>
         <li><a href="#registration">Registration</a></li>
         <li><a href="#how">How it works</a></li>
         <li><a href="#organiser">Organiser</a></li>
@@ -387,7 +411,7 @@
           <h2 id="about-title">A one-day forum on HSE excellence in Nigeria’s energy growth</h2>
         </div>
         <p>The HSE Summit 2026 brings together professionals, industry practitioners, regulators, academics, students and other stakeholders to examine how Nigeria’s energy industry can grow production while maintaining strong health, safety and environmental standards.</p>
-        <p>The summit is a free, in-person event at Renaissance RA, Port Harcourt, on 27 November 2026. Associated paid trainings start from 21 November: the hybrid training can be attended virtually or in person, while the practical training is in person only. The programme focuses on knowledge sharing, technical engagement and practical learning.</p>
+        <p>The summit is a free, in-person event at Renaissance RA, Port Harcourt, on 27 November 2026. Associated paid trainings start from 21 November: choose one of four hybrid and online trainings, or one of two in-person practical trainings. The programme focuses on knowledge sharing, technical engagement and practical learning.</p>
         <div class="quote">
           <p>Nigeria can produce more — <span>but never at the cost of lives, safety or the environment.</span></p>
         </div>
@@ -406,6 +430,100 @@
           <li>Regulatory Compliance</li>
           <li>Lessons from Incidents</li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TRAININGS ================= -->
+  <section class="section" id="trainings" aria-labelledby="trainings-title" style="padding-top:20px">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <p class="kicker">Associated trainings</p>
+        <h2 id="trainings-title">Add a training to your summit</h2>
+        <p>Trainings start from 21 November. Each Summit + Training registration includes one training of your choice.</p>
+      </div>
+
+      <div class="train-group" id="hybrid-online">
+        <div class="train-head reveal">
+          <h3>Hybrid &amp; online trainings</h3>
+          <p>Choose one. Training 1 is hybrid (in person or online); Trainings 2–4 are online only.</p>
+        </div>
+        <div class="trainings">
+          <article class="course reveal">
+            <p class="course-top"><span class="course-num">Training 1</span><span class="mode mode-hybrid">Hybrid</span></p>
+            <h4>Offshore &amp; Onshore Safety Course</h4>
+            <ul>
+              <li>Industry safety regulations</li>
+              <li>Value of improved toolbox practices</li>
+              <li>Application of digitization in safety practice</li>
+              <li>Journey management systems</li>
+              <li>Job hazard analysis (JHA)</li>
+              <li>HSE audit management systems</li>
+            </ul>
+          </article>
+          <article class="course reveal">
+            <p class="course-top"><span class="course-num">Training 2</span><span class="mode mode-online">Online</span></p>
+            <h4>Process Safety Barrier Management and ALARP Demonstration</h4>
+            <ul>
+              <li>Understanding critical barriers</li>
+              <li>Risk assessment</li>
+              <li>Major accident hazards (MAH) and bowtie risk management</li>
+              <li>Tolerability and ALARP</li>
+              <li>Assurance of safety-critical equipment</li>
+              <li>Performance standards</li>
+            </ul>
+          </article>
+          <article class="course reveal">
+            <p class="course-top"><span class="course-num">Training 3</span><span class="mode mode-online">Online</span></p>
+            <h4>Emergency Response and Crisis Management</h4>
+            <ul>
+              <li>Emergency preparedness</li>
+              <li>Oil spill response</li>
+              <li>Fire response</li>
+              <li>Security incidents</li>
+              <li>Business continuity</li>
+              <li>Incident command systems</li>
+            </ul>
+          </article>
+          <article class="course reveal">
+            <p class="course-top"><span class="course-num">Training 4</span><span class="mode mode-online">Online</span></p>
+            <h4>Building a Culture of Intervention and Care</h4>
+            <ul>
+              <li>Leadership visibility</li>
+              <li>Safety culture</li>
+              <li>Workforce empowerment</li>
+              <li>Stop-work authority</li>
+              <li>Human and organizational performance</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+
+      <div class="train-group" id="practical">
+        <div class="train-head reveal">
+          <h3>Practical trainings</h3>
+          <p>Choose one. Both are hands-on and held in person only.</p>
+        </div>
+        <div class="trainings two">
+          <article class="course practical reveal">
+            <span class="tier-icon ti-green" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/></svg>
+            </span>
+            <div>
+              <p class="course-top"><span class="course-num">Practical 1</span><span class="mode mode-person">In person</span></p>
+              <h4>Confined Space Training</h4>
+            </div>
+          </article>
+          <article class="course practical reveal">
+            <span class="tier-icon ti-green" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c3.9 0 7-2.9 7-6.8 0-2.7-1.6-4.9-3.3-6.6-.3 1.6-1.2 2.7-2.6 3.2.3-3.2-1.2-6.2-3.6-8.8C9 6.3 5 9.6 5 15.2 5 19.1 8.1 22 12 22z"/></svg>
+            </span>
+            <div>
+              <p class="course-top"><span class="course-num">Practical 2</span><span class="mode mode-person">In person</span></p>
+              <h4>Firefighting Training</h4>
+            </div>
+          </article>
+        </div>
       </div>
     </div>
   </section>
@@ -453,9 +571,9 @@
             <span class="tier-icon ti-gold" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/><path d="M10 8l4 2-4 2z" fill="currentColor"/></svg>
             </span>
-            <h3 id="t2">Summit + Hybrid Training</h3>
+            <h3 id="t2">Summit + Hybrid or Online Training</h3>
           </div>
-          <p class="tier-desc">Summit access plus the hybrid training, which you can attend virtually or in person.</p>
+          <p class="tier-desc">Summit access plus one training of your choice: Training 1 is hybrid, Trainings 2–4 are online only. <a href="#hybrid-online">See the trainings</a></p>
 
           <div class="options">
             <div class="opt best">
@@ -464,14 +582,14 @@
                 <span class="price">₦40,000</span>
               </div>
               <div class="tags"><span class="tag tag-best">Best value</span><span class="tag tag-save">Save ₦30,000</span></div>
-              <a class="btn btn-primary pay" href="https://paystack.shop/pay/hsesummit-hybridtraining-m" target="_blank" rel="noopener">Register — Summit + Hybrid Training, SPE Member</a>
+              <a class="btn btn-primary pay" href="https://paystack.shop/pay/hsesummit-hybridtraining-m" target="_blank" rel="noopener" aria-label="Register for Summit + Hybrid or Online Training, SPE Member">Register — SPE Member</a>
             </div>
             <div class="opt">
               <div class="opt-row">
                 <span class="opt-name">Non-member</span>
                 <span class="price">₦70,000</span>
               </div>
-              <a class="btn btn-ghost pay" href="https://paystack.shop/pay/hsesummit-hybridtraining" target="_blank" rel="noopener">Register — Summit + Hybrid Training, Non-member</a>
+              <a class="btn btn-ghost pay" href="https://paystack.shop/pay/hsesummit-hybridtraining" target="_blank" rel="noopener" aria-label="Register for Summit + Hybrid or Online Training, Non-member">Register — Non-member</a>
             </div>
           </div>
         </article>
@@ -484,7 +602,7 @@
             </span>
             <h3 id="t3">Summit + Practical Training</h3>
           </div>
-          <p class="tier-desc">Summit access plus the hands-on practical training, held in person only.</p>
+          <p class="tier-desc">Summit access plus one in-person practical training: Confined Space or Firefighting. <a href="#practical">See the trainings</a></p>
 
           <div class="options">
             <div class="opt best">
@@ -493,14 +611,14 @@
                 <span class="price">₦70,000</span>
               </div>
               <div class="tags"><span class="tag tag-best">Best value</span><span class="tag tag-save">Save ₦30,000</span></div>
-              <a class="btn btn-primary pay" href="https://paystack.shop/pay/hsesummit-practicaltraining-m" target="_blank" rel="noopener">Register — Summit + Practical Training, SPE Member</a>
+              <a class="btn btn-primary pay" href="https://paystack.shop/pay/hsesummit-practicaltraining-m" target="_blank" rel="noopener" aria-label="Register for Summit + Practical Training, SPE Member">Register — SPE Member</a>
             </div>
             <div class="opt">
               <div class="opt-row">
                 <span class="opt-name">Non-member</span>
                 <span class="price">₦100,000</span>
               </div>
-              <a class="btn btn-ghost pay" href="https://paystack.shop/pay/hsesummit-practicaltraining-N" target="_blank" rel="noopener">Register — Summit + Practical Training, Non-member</a>
+              <a class="btn btn-ghost pay" href="https://paystack.shop/pay/hsesummit-practicaltraining-N" target="_blank" rel="noopener" aria-label="Register for Summit + Practical Training, Non-member">Register — Non-member</a>
             </div>
           </div>
         </article>
@@ -556,7 +674,7 @@
           <div class="pillar">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg>
             <h3>Training opportunities</h3>
-            <p>Hybrid and practical training options alongside the summit.</p>
+            <p>Hybrid, online and practical training options alongside the summit.</p>
           </div>
           <div class="pillar">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>
