@@ -144,7 +144,8 @@
   .train-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 24px;margin-bottom:18px}
   .train-head h3{font-size:22px;color:var(--blue-900)}
   .train-head p{color:var(--muted);font-size:15px}
-  .trainings{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .trainings{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .trainings.one{grid-template-columns:1fr}
   .trainings.two{grid-template-columns:repeat(2,1fr)}
   @media (max-width:1000px){.trainings{grid-template-columns:1fr 1fr}}
   @media (max-width:600px){.trainings,.trainings.two{grid-template-columns:1fr}}
@@ -155,9 +156,14 @@
   .mode-hybrid{background:var(--gold-soft);color:#7A5200}
   .mode-online{background:var(--blue-100);color:var(--blue-700)}
   .mode-person{background:var(--green-soft);color:#1E7A31}
+  .mode-free{background:#1E7A31;color:#fff}
+  .badges{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:6px}
   .course h4{font:700 17px/1.3 "Sora",sans-serif;color:var(--blue-900)}
   .course ul{list-style:none;display:flex;flex-direction:column;gap:8px}
   .course li{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--muted)}
+  .course.wide ul{display:grid;grid-template-columns:repeat(3,1fr);gap:8px 24px}
+  @media (max-width:1000px){.course.wide ul{grid-template-columns:1fr 1fr}}
+  @media (max-width:600px){.course.wide ul{grid-template-columns:1fr}}
   .course.practical{flex-direction:row;align-items:center;gap:18px}
   .course.practical > div{flex:1;display:flex;flex-direction:column;gap:8px}
 
@@ -411,7 +417,7 @@
           <h2 id="about-title">A one-day forum on HSE excellence in Nigeria’s energy growth</h2>
         </div>
         <p>The HSE Summit 2026 brings together professionals, industry practitioners, regulators, academics, students and other stakeholders to examine how Nigeria’s energy industry can grow production while maintaining strong health, safety and environmental standards.</p>
-        <p>The summit is a free, in-person event at Renaissance RA, Port Harcourt, on 27 November 2026. Associated paid trainings start from 21 November: choose one of four hybrid and online trainings, or one of two in-person practical trainings. The programme focuses on knowledge sharing, technical engagement and practical learning.</p>
+        <p>The summit is a free, in-person event at Renaissance RA, Port Harcourt, on 27 November 2026. Associated trainings start from 21 November: three free online trainings, a paid hybrid training, and two paid in-person practical trainings. The programme focuses on knowledge sharing, technical engagement and practical learning.</p>
         <div class="quote">
           <p>Nigeria can produce more — <span>but never at the cost of lives, safety or the environment.</span></p>
         </div>
@@ -440,16 +446,16 @@
       <div class="section-head center reveal">
         <p class="kicker">Associated trainings</p>
         <h2 id="trainings-title">Add a training to your summit</h2>
-        <p>Trainings start from 21 November. Each Summit + Training registration includes one training of your choice.</p>
+        <p>Trainings start from 21 November. The online trainings are free; the hybrid and practical trainings are paid.</p>
       </div>
 
-      <div class="train-group" id="hybrid-online">
+      <div class="train-group" id="hybrid">
         <div class="train-head reveal">
-          <h3>Hybrid &amp; online trainings</h3>
-          <p>Choose one. Training 1 is hybrid (in person or online); Trainings 2–4 are online only.</p>
+          <h3>Hybrid training</h3>
+          <p>Paid. Attend in person or online.</p>
         </div>
-        <div class="trainings">
-          <article class="course reveal">
+        <div class="trainings one">
+          <article class="course wide reveal">
             <p class="course-top"><span class="course-num">Training 1</span><span class="mode mode-hybrid">Hybrid</span></p>
             <h4>Offshore &amp; Onshore Safety Course</h4>
             <ul>
@@ -461,8 +467,17 @@
               <li>HSE audit management systems</li>
             </ul>
           </article>
+        </div>
+      </div>
+
+      <div class="train-group" id="online">
+        <div class="train-head reveal">
+          <h3>Free online trainings</h3>
+          <p>Choose one when you fill in the free registration form.</p>
+        </div>
+        <div class="trainings">
           <article class="course reveal">
-            <p class="course-top"><span class="course-num">Training 2</span><span class="mode mode-online">Online</span></p>
+            <p class="course-top"><span class="course-num">Training 2</span><span class="badges"><span class="mode mode-online">Online</span><span class="mode mode-free">Free</span></span></p>
             <h4>Process Safety Barrier Management and ALARP Demonstration</h4>
             <ul>
               <li>Understanding critical barriers</li>
@@ -474,7 +489,7 @@
             </ul>
           </article>
           <article class="course reveal">
-            <p class="course-top"><span class="course-num">Training 3</span><span class="mode mode-online">Online</span></p>
+            <p class="course-top"><span class="course-num">Training 3</span><span class="badges"><span class="mode mode-online">Online</span><span class="mode mode-free">Free</span></span></p>
             <h4>Emergency Response and Crisis Management</h4>
             <ul>
               <li>Emergency preparedness</li>
@@ -486,7 +501,7 @@
             </ul>
           </article>
           <article class="course reveal">
-            <p class="course-top"><span class="course-num">Training 4</span><span class="mode mode-online">Online</span></p>
+            <p class="course-top"><span class="course-num">Training 4</span><span class="badges"><span class="mode mode-online">Online</span><span class="mode mode-free">Free</span></span></p>
             <h4>Building a Culture of Intervention and Care</h4>
             <ul>
               <li>Leadership visibility</li>
@@ -502,7 +517,7 @@
       <div class="train-group" id="practical">
         <div class="train-head reveal">
           <h3>Practical trainings</h3>
-          <p>Choose one. Both are hands-on and held in person only.</p>
+          <p>Paid. Choose one; both are hands-on and held in person only.</p>
         </div>
         <div class="trainings two">
           <article class="course practical reveal">
@@ -534,23 +549,23 @@
       <div class="section-head center reveal">
         <p class="kicker">Registration categories</p>
         <h2 id="reg-title">Choose your registration</h2>
-        <p>The summit is free to attend. To add a training, choose a Summit + Training option and pay securely online; SPE members enjoy reduced training rates.</p>
+        <p>The summit and the online trainings are free. The hybrid and practical trainings are paid securely online, with reduced rates for SPE members.</p>
       </div>
 
       <div class="tiers">
 
-        <!-- ---------- Tier 1: Summit Only ---------- -->
+        <!-- ---------- Tier 1: Summit + Online Training (free) ---------- -->
         <article class="tier reveal" aria-labelledby="t1">
           <div class="tier-top">
             <span class="tier-icon ti-blue" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16M6 20V9l6-5 6 5v11M10 20v-6h4v6"/></svg>
             </span>
-            <h3 id="t1">Summit Only</h3>
+            <h3 id="t1">Summit + Online Training</h3>
           </div>
-          <p class="tier-desc">Free access to the one-day summit on 27 November, in person at Renaissance RA.</p>
+          <p class="tier-desc">Free access to the one-day summit on 27 November, in person at Renaissance RA, plus one optional online training chosen on the form. <a href="#online">See the trainings</a></p>
           <p class="deadline">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-            Registration closes 25 November 2026, 12:00 noon
+            Summit registration closes 25 November 2026, 12:00 noon
           </p>
 
           <div class="options">
@@ -571,9 +586,9 @@
             <span class="tier-icon ti-gold" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/><path d="M10 8l4 2-4 2z" fill="currentColor"/></svg>
             </span>
-            <h3 id="t2">Summit + Hybrid or Online Training</h3>
+            <h3 id="t2">Summit + Hybrid Training</h3>
           </div>
-          <p class="tier-desc">Summit access plus one training of your choice: Training 1 is hybrid, Trainings 2–4 are online only. <a href="#hybrid-online">See the trainings</a></p>
+          <p class="tier-desc">Summit access plus Training 1, the Offshore &amp; Onshore Safety Course, attended in person or online. <a href="#hybrid">See the topics</a></p>
 
           <div class="options">
             <div class="opt best">
@@ -582,14 +597,14 @@
                 <span class="price">₦40,000</span>
               </div>
               <div class="tags"><span class="tag tag-best">Best value</span><span class="tag tag-save">Save ₦30,000</span></div>
-              <a class="btn btn-primary pay" href="https://paystack.shop/pay/hsesummit-hybridtraining-m" target="_blank" rel="noopener" aria-label="Register for Summit + Hybrid or Online Training, SPE Member">Register — SPE Member</a>
+              <a class="btn btn-primary pay" href="https://paystack.shop/pay/hsesummit-hybridtraining-m" target="_blank" rel="noopener" aria-label="Register for Summit + Hybrid Training, SPE Member">Register — SPE Member</a>
             </div>
             <div class="opt">
               <div class="opt-row">
                 <span class="opt-name">Non-member</span>
                 <span class="price">₦70,000</span>
               </div>
-              <a class="btn btn-ghost pay" href="https://paystack.shop/pay/hsesummit-hybridtraining" target="_blank" rel="noopener" aria-label="Register for Summit + Hybrid or Online Training, Non-member">Register — Non-member</a>
+              <a class="btn btn-ghost pay" href="https://paystack.shop/pay/hsesummit-hybridtraining" target="_blank" rel="noopener" aria-label="Register for Summit + Hybrid Training, Non-member">Register — Non-member</a>
             </div>
           </div>
         </article>
@@ -642,12 +657,12 @@
         <li class="step reveal">
           <div class="step-num" aria-hidden="true">1</div>
           <h3>Select a category</h3>
-          <p>Choose free summit registration, or a Summit + Training option at your membership rate.</p>
+          <p>Choose free registration for the summit and an online training, or a paid hybrid or practical training at your membership rate.</p>
         </li>
         <li class="step reveal">
           <div class="step-num" aria-hidden="true">2</div>
           <h3>Register or pay</h3>
-          <p>Fill in the free registration form for the summit, or pay for a training option on the secure Paystack checkout page.</p>
+          <p>Fill in the free registration form, or pay for the hybrid or practical training on the secure Paystack checkout page.</p>
         </li>
         <li class="step reveal">
           <div class="step-num" aria-hidden="true">3</div>
